@@ -1,0 +1,17 @@
+{
+	"ActionResult": {
+		"_Name": "result"
+	},
+	"OnFailure": "/SalesOrdersOnline/Actions/SalesOrder/CreateUpdateDelete/SOLifeCycleStatusChangeFailure.action",
+	"OnSuccess": "/SalesOrdersOnline/Actions/SalesOrder/CreateUpdateDelete/SOLifeCycleStatusChangeSuccess.action",
+	"Properties": {
+		"LifeCycleStatus": "A",
+		"LifeCycleStatusName": "Accepted"
+	},
+	"Target": {
+		"EntitySet": "SalesOrderHeaders",
+		"ReadLink": "{@odata.readLink}",
+		"Service": "/SalesOrdersOnline/Services/SampleSrv.service"
+	},
+	"_Type": "Action.Type.ODataService.UpdateEntity"
+}

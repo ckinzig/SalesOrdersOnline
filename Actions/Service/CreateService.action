@@ -1,0 +1,11 @@
+{
+	"_Type": "Action.Type.ODataService.Create",
+	"Service": "/SalesOrdersOnline/Services/SampleSrv.service",
+	"OnSuccess": "/SalesOrdersOnline/Actions/Service/OpenService.action",
+	"OnFailure": "/SalesOrdersOnline/Actions/Service/ServiceFailure.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "$(L,'createServiceActivityIndicatorText')",
+	"ActionResult": {
+		"_Name": "result"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"ActionResult": {
+		"_Name": "result"
+	},
+	"OnFailure": "/SalesOrdersOnline/Actions/CreateUpdateDelete/DeleteEntityFailure.action",
+	"OnSuccess": "/SalesOrdersOnline/Actions/CreateUpdateDelete/DeleteEntitySuccess.action",
+	"Target": {
+		"EntitySet": "SalesOrderItems",
+		"ReadLink": "{@odata.readLink}",
+		"Service": "/SalesOrdersOnline/Services/SampleSrv.service"
+	},
+	"_Type": "Action.Type.ODataService.DeleteEntity"
+}

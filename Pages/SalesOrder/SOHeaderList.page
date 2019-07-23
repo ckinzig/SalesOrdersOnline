@@ -1,0 +1,65 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/SalesOrdersOnline/Actions/User/UserProfileSettings.action",
+				"Position": "left",
+				"Text": "$(L,'user')"
+			},
+			{
+				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/OnRefresh.js",
+				"Position": "right",
+				"SystemItem": "Refresh",
+				"Text": ""
+			},
+			{
+				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/OnCreate.js",
+				"Position": "right",
+				"SystemItem": "Add",
+				"Text": ""
+			},
+			{
+				"OnPress": "/SalesOrdersOnline/Actions/SalesOrder/NavToSOHeaderFilter.action",
+				"Position": "right",
+				"Text": "$(L,'filter')"
+			}
+		]
+	},
+	"Caption": "$(L,'salesOrders')",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"EmptySection": {
+						"Caption": "$(L,noItemsAvailable)"
+					},
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Footnote": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/Format.js",
+						"OnPress": "/SalesOrdersOnline/Actions/SalesOrder/NavToSODetails.action",
+						"StatusText": "{LifeCycleStatusName}",
+						"Subhead": "$(DT,{CreatedAt})",
+						"SubstatusText": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+						"Title": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/Format.js"
+					},
+					"Target": {
+						"EntitySet": "SalesOrderHeaders",
+						"QueryOptions": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/QueryOptions.js",
+						"Service": "/SalesOrdersOnline/Services/SampleSrv.service"
+					},
+					"_Name": "SOHeaders",
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"_Name": "SectionedTable",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"OnLoaded": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/OnLoaded.js",
+	"OnReturning": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/OnReturning.js",
+	"_Name": "SOHeaderList",
+	"_Type": "Page"
+}

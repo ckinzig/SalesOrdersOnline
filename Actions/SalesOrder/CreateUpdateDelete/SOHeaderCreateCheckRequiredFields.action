@@ -1,0 +1,9 @@
+{
+	"OnFailure": "/SalesOrdersOnline/Rules/Common/UpdateRequiredFailed.js",
+	"OnSuccess": "/SalesOrdersOnline/Actions/SalesOrder/CreateUpdateDelete/SOHeaderCreate.action",
+	"RequiredFields": [
+		"ObjectCellListPickerCustomerId",
+		"SimplePropertyCurrencyCode"
+	],
+	"_Type": "Action.Type.CheckRequiredFields"
+}

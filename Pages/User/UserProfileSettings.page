@@ -1,0 +1,74 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/SalesOrdersOnline/Actions/CancelPage.action",
+				"Position": "left",
+				"Text": "$(L,'close')"
+			}
+		]
+	},
+	"Caption": "$(L,'profile')",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Layout": {
+						"MinimumInteritemSpacing": 66,
+						"NumberOfColumns": 1
+					},
+					"SimplePropertyCells": [
+						{
+							"SimplePropertyCell": {
+								"AccessoryType": "disclosureIndicator",
+								"KeyName": "$(L,'passcode')",
+								"OnPress": "/SalesOrdersOnline/Rules/UserPreferences/ChangeUserPasscode.js"
+							}
+						}
+					],
+					"_Name": "SectionSimplePropertyCollection0",
+					"_Type": "Section.Type.SimplePropertyCollection"
+				},
+				{
+					"Layout": {
+						"MinimumInteritemSpacing": 66,
+						"NumberOfColumns": 1
+					},
+					"SimplePropertyCells": [
+						{
+							"SimplePropertyCell": {
+								"AccessoryType": "disclosureIndicator",
+								"KeyName": "$(L,'support')",
+								"OnPress": "/SalesOrdersOnline/Actions/User/UserSupport.action"
+							}
+						}
+					],
+					"_Name": "SectionSimplePropertyCollection1",
+					"_Type": "Section.Type.SimplePropertyCollection"
+				},
+				{
+					"Buttons": [
+						{
+							"OnPress": "/SalesOrdersOnline/Rules/Common/ResetAlertAction.js",
+							"Style": "ResetRed",
+							"TextAlignment": "center",
+							"Title": "$(L,'reset')"
+						}
+					],
+					"Footer": {
+						"AttributeLabel": "",
+						"Caption": "$(L,'deleteApplicationDataWarning')",
+						"FooterStyle": "help",
+						"UseBottomPadding": true
+					},
+					"_Name": "SectionButtonTable0",
+					"_Type": "Section.Type.ButtonTable"
+				}
+			],
+			"_Name": "SectionedTable",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "UserProfileSettings",
+	"_Type": "Page"
+}

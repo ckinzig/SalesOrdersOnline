@@ -1,0 +1,41 @@
+{
+	"ActionResult": {
+		"_Name": "result"
+	},
+	"CreateLinks": [
+		{
+			"Property": "Header",
+			"Target": {
+				"EntitySet": "SalesOrderHeaders",
+				"ReadLink": "/SalesOrdersOnline/Rules/Common/ChangeSet/ChangeSetSwitchReadLink.js"
+			}
+		},
+		{
+			"Property": "ProductDetails",
+			"Target": {
+				"EntitySet": "Products",
+				"QueryOptions": "$filter=ProductId eq '{{#Control:ObjectCellListPickerProductId/#Value/#First/#Property:ReturnValue}}'"
+			}
+		}
+	],
+	"OnFailure": "/SalesOrdersOnline/Actions/CreateUpdateDelete/CreateEntityFailure.action",
+	"OnSuccess": "/SalesOrdersOnline/Rules/Common/ChangeSet/CreateEntitySuccess.js",
+	"Properties": {
+		"CurrencyCode": "#ClientData/#Property:Product/#Property:CurrencyCode",
+		"DeliveryDate": "#Control:DatePickerDeliveryDate/#Value",
+		"GrossAmount": "/SalesOrdersOnline/Rules/SalesOrder/SOItemCreateUpdate/GrossAmount.js",
+		"ItemNumber": "/SalesOrdersOnline/Rules/SalesOrder/SOItemCreateItemNumber.js",
+		"NetAmount": "/SalesOrdersOnline/Rules/SalesOrder/SOItemCreateUpdate/NetAmount.js",
+		"ProductId": "#Control:ObjectCellListPickerProductId/#Value/#First/#Property:ReturnValue",
+		"Quantity": "#Control:SimplePropertyQuantity/#Value",
+		"QuantityUnit": "#Control:SimplePropertyQuantityUnit/#Value",
+		"SalesOrderId": "/SalesOrdersOnline/Rules/SalesOrder/GetSalesOrderId.js",
+		"TaxAmount": "/SalesOrdersOnline/Rules/SalesOrder/SOItemCreateUpdate/TaxAmount.js"
+	},
+	"Target": {
+		"EntitySet": "SalesOrderItems",
+		"Service": "/SalesOrdersOnline/Services/SampleSrv.service"
+	},
+	"ValidationRule": "/SalesOrdersOnline/Rules/SalesOrder/SOItemCreateUpdate/Validation.js",
+	"_Type": "Action.Type.ODataService.CreateEntity"
+}

@@ -1,0 +1,9 @@
+{
+	"ActionResult": {
+		"_Name": "result"
+	},
+	"OnFailure": "/SalesOrdersOnline/Actions/Service/ServiceFailure.action",
+	"OnSuccess": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/OnLoaded.js",
+	"Service": "/SalesOrdersOnline/Services/SampleSrv.service",
+	"_Type": "Action.Type.ODataService.Open"
+}
