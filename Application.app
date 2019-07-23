@@ -7,7 +7,6 @@
 		"/SalesOrdersOnline/Rules/Log/InitializeLogger.js"
 	],
 	"OnWillUpdate": "/SalesOrdersOnline/Rules/ApplicationEvents/OnWillUpdate.js",
-	"SDKStyles": "/SalesOrdersOnline/Styles/SDKStyles.nss",
 	"Styles": "/SalesOrdersOnline/Styles/Styles.less",
 	"Version": "/SalesOrdersOnline/Globals/AppDefinition_Version.global",
 	"_Name": "SalesOrdersOnline"
