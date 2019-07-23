@@ -1,4 +1,4 @@
-/// version: MDK SDK 3.1
+/// version: MDK SDK 3.0
 
 /**
  * A designer-facing interface that provides access to a context.
@@ -110,12 +110,6 @@ interface IClientAPI {
   dismissActivityIndicator(id?: number): void;
   // Invoke an OData function import. Returns a Promise which resolves to the result(if existing) of the operation.
   callFunction(serviceName: string, oFunction: {Name: string, Parameters?: { key: string, value: any }}): Promise<any>;
-  /**
-   * Update an existing progress banner with new text.  If no progress banner action is in progress, no banner will be 
-   * displayed.
-   * @param message - The text to show on the progress banner
-   */
-  updateProgressBanner(message: string): void;
 }
 
 /**
@@ -132,8 +126,6 @@ interface IControlProxy extends IClientAPI {
    * clientAPI.setupValidationProperties('ValidationViewIsHidden', true).applyValidation();
    */
   clearValidation();
-  // Workaround to BCP 1880677511: Hides the validaiton view while changing value. 
-  clearValidationOnValueChange();
   // get the controls caption
   getCaption(): string;
   // get the controls name
@@ -196,10 +188,10 @@ interface IControlProxy extends IClientAPI {
    */
   setValue(value: any, notify?: boolean): IControlProxy;
   /**
-   * @deprecated - Use the 'visible' property on the FormCellControlProxy 
    * Sets the control's visible state
    * 
-   * @param value visible state
+   * @param {boolean} value - editable setting
+   * @returns {IControlProxy} this - allows chaining
    */
   setVisible(value: boolean);
 }
@@ -243,19 +235,6 @@ interface IControlContainerProxy extends IClientAPI {
  * In addition it provides access to the IControlProxy interface.
  */
 interface IFormCellProxy extends IControlProxy {
-  /**
-   * Returns the user provided search string for a ListPicker FormCell
-   */
-  searchString: string;
-  /**
-   * Property for viewing and setting the current visible state of the control.
-   */
-  visible: boolean;
-  /**
-   * Factory method to construct an instance of DataQueryBuilder
-   */
-  dataQueryBuilder(query: string): any;
-
   /**
    * Gets the target specifier or undefined
    * 
@@ -380,15 +359,6 @@ interface IPageProxy extends IControlContainerProxy {
  * for application specific customizations.
  */
 interface ISectionedTableProxy extends IControlProxy {
-  sections: ISectionProxy[];
-  /**
-   * Returns the user provided search string for this section table
-   */
-  searchString: string;
-  /**
-   * Factory method to construct an instance of DataQueryBuilder
-   */
-  dataQueryBuilder(query: string): any;
   /**
    * Get all of the sections that the table contains.
    */
@@ -396,10 +366,6 @@ interface ISectionedTableProxy extends IControlProxy {
 }
 
 interface ISectionProxy {
-  /**
-   * Returns the user provided search string for this section
-   */
-  searchString: string;
   /**
    * The section name
    */
