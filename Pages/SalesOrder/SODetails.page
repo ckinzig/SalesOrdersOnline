@@ -73,7 +73,7 @@
 						"UseBottomPadding": true
 					},
 					"Header": {
-						"Caption": "$(L,Items)",
+						"Caption": "$(L,items)",
 						"UseTopPadding": true
 					},
 					"ObjectCell": {
@@ -82,7 +82,7 @@
 						"DetailImageIsCircular": false,
 						"OnPress": "/SalesOrdersOnline/Actions/SalesOrder/NavToSOItemDetails.action",
 						"PreserveIconStackSpacing": false,
-						"StatusText": "$(L,'quantityQuantityUnit',{Quantity},{QuantityUnit})",
+						"StatusText": "/SalesOrdersOnline/Rules/SalesOrder/SODetails/Format.js",
 						"Subhead": "#Property:ProductDetails/#Property:CategoryName",
 						"SubstatusText": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
 						"Title": "/SalesOrdersOnline/Rules/SalesOrder/SODetails/Format.js"

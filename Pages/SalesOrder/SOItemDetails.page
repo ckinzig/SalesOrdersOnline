@@ -43,7 +43,7 @@
 						},
 						{
 							"KeyName": "$(L,'quantityLabel')",
-							"Value": "$(L,'quantityQuantityUnit',{Quantity},{QuantityUnit})"
+							"Value": "/SalesOrdersOnline/Rules/SalesOrder/SOItemDetails/QuantityQuantityUnit.js"
 						}
 					],
 					"Layout": {

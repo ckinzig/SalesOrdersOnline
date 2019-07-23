@@ -49,6 +49,12 @@ export default function Test(context) {
 
 	case 'SalesOrderItems':
 		switch (property) {
+		case 'StatusText':
+			// instead of: $(L,'quantityQuantityUnit',{Quantity},{QuantityUnit})
+			params.push(binding.Quantity);
+			params.push(binding.QuantityUnit);
+			value = context.localizeText('quantityQuantityUnit', params);
+			break;
 		case 'Title':
 			// instead of: $(L,'productNameItemNumber',{{#Property:ProductDetails/#Property:Name}},{ItemNumber})
 			params.push(binding.ProductDetails.Name);

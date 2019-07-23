@@ -60,23 +60,7 @@
 							"AllowEmptySelection": true,
 							"AllowMultipleSelection": true,
 							"Caption": "$(L,'statusLabel')",
-							"FilterProperty": {
-								"name": "LifeCycleStatus",
-								"values": [
-									{
-										"DisplayValue": "New",
-										"ReturnValue": "N"
-									},
-									{
-										"DisplayValue": "Accepted",
-										"ReturnValue": "A"
-									},
-									{
-										"DisplayValue": "Rejected",
-										"ReturnValue": "R"
-									}
-								]
-							},
+							"FilterProperty": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderFilter/LifeCycleStatusFilter.js",
 							"IsEditable": true,
 							"IsVisible": true,
 							"_Name": "LifeCycleStatusFilter",

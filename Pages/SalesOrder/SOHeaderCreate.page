@@ -32,7 +32,7 @@
 									"Footnote": "{City}",
 									"PreserveIconStackSpacing": false,
 									"StatusText": "{Country}",
-									"Title": "$(L,'fullName',{{#Property:LastName}},{{#Property:FirstName}})"
+									"Title": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderCreateUpdate/FullName.js"
 								},
 								"ReturnValue": "{CustomerId}",
 								"Target": {
