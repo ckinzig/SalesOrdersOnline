@@ -4,6 +4,7 @@
 			{
 				"OnPress": "/SalesOrdersOnline/Actions/CancelPage.action",
 				"Position": "left",
+				"SystemItem": "Cancel",
 				"Text": "$(L,'close')"
 			}
 		]
