@@ -25,7 +25,7 @@
             "type": "MDK",
             "request": "launch",
             "platform": "android",
-            "appRoot": "C:/Users/C17579/MDK/MDKClient_SDK/MDK Proof of Concept",
+            "appRoot": "C:/Users/C17579/MDK/MDKClient_SDK/MDK Sales Orders Online",
             "sourceMaps": true,
             "watch": true
         },
@@ -34,7 +34,7 @@
             "type": "MDK",
             "request": "attach",
             "platform": "android",
-            "appRoot": "C:/Users/C17579/MDK/MDKClient_SDK/MDK Proof of Concept",
+            "appRoot": "C:/Users/C17579/MDK/MDKClient_SDK/MDK Sales Orders Online",
             "sourceMaps": true,
             "watch": false
         }

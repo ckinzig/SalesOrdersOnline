@@ -4,7 +4,8 @@ export default class ProductPicture {
 	}
 
 	static getFileName(productId) {
-		return productId + '.jpg';
+		var fileName = productId + '.jpg';
+		return fileName.replace(/-/g, '_');
 	}
 
 	static getFolder(context) {

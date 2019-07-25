@@ -40,6 +40,7 @@
 						"AccessoryType": "disclosureIndicator",
 						"Footnote": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/Format.js",
 						"OnPress": "/SalesOrdersOnline/Actions/SalesOrder/NavToSODetails.action",
+						"PreserveIconStackSpacing": false,
 						"StatusText": "{LifeCycleStatusName}",
 						"Subhead": "$(DT,{CreatedAt})",
 						"SubstatusText": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
