@@ -5,7 +5,7 @@
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOItemNavToCreate.js",
 				"Position": "right",
 				"SystemItem": "Add",
-				"Text": ""
+				"Text": "$(L,'addButtonText')"
 			}
 		]
 	},

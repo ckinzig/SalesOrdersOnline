@@ -5,13 +5,13 @@
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOOnDeleteAction.js",
 				"Position": "right",
 				"SystemItem": "Trash",
-				"Text": ""
+				"Text": "$(L,'deleteButtonText')"
 			},
 			{
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOItemNavToUpdate.js",
 				"Position": "right",
 				"SystemItem": "Edit",
-				"Text": ""
+				"Text": "$(L,'editButtonText')"
 			}
 		]
 	},

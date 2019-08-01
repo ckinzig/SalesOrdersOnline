@@ -5,13 +5,13 @@
 				"OnPress": "/SalesOrdersOnline/Actions/CancelPage.action",
 				"Position": "left",
 				"SystemItem": "Cancel",
-				"Text": ""
+				"Text": "$(L,'cancelButtonText')"
 			},
 			{
 				"OnPress": "/SalesOrdersOnline/Actions/ClosePage.action",
 				"Position": "right",
 				"SystemItem": "Done",
-				"Text": ""
+				"Text": "$(L,'doneButtonText')"
 			}
 		]
 	},

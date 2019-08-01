@@ -5,13 +5,13 @@
 				"OnPress": "/SalesOrdersOnline/Actions/CancelPage.action",
 				"Position": "left",
 				"SystemItem": "Cancel",
-				"Text": ""
+				"Text": "$(L,'cancelButtonText')"
 			},
 			{
 				"OnPress": "/SalesOrdersOnline/Actions/SalesOrder/CreateUpdateDelete/SOItemCreateUpdateCheckRequiredFields.action",
 				"Position": "right",
 				"SystemItem": "Save",
-				"Text": ""
+				"Text": "$(L,'saveButtonText')"
 			}
 		]
 	},

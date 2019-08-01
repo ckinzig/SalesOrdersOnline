@@ -5,13 +5,13 @@
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOItemNavToCreate.js",
 				"Position": "right",
 				"SystemItem": "Add",
-				"Text": ""
+				"Text": "$(L,'addButtonText')"
 			},
 			{
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOOnDeleteAction.js",
 				"Position": "right",
 				"SystemItem": "Trash",
-				"Text": ""
+				"Text": "$(L,'deleteButtonText')"
 			}
 		]
 	},
@@ -108,6 +108,7 @@
 				"Clickable": true,
 				"Enabled": true,
 				"SystemItem": "FlexibleSpace",
+				"Visible": true,
 				"_Name": "FlexibleSpaceLeftTbI",
 				"_Type": "Control.Type.ToolbarItem"
 			},
@@ -116,6 +117,7 @@
 				"Clickable": true,
 				"Enabled": "/SalesOrdersOnline/Rules/SalesOrder/SOIsAcceptable.js",
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SODetails/OnAccept.js",
+				"Visible": true,
 				"_Name": "SalesOrderAcceptTbI",
 				"_Type": "Control.Type.ToolbarItem"
 			},
@@ -124,6 +126,7 @@
 				"Clickable": true,
 				"Enabled": "/SalesOrdersOnline/Rules/SalesOrder/SOIsRejectable.js",
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SODetails/OnReject.js",
+				"Visible": true,
 				"_Name": "SalesOrderRejectTbI",
 				"_Type": "Control.Type.ToolbarItem"
 			}

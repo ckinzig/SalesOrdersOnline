@@ -10,13 +10,13 @@
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/OnRefresh.js",
 				"Position": "right",
 				"SystemItem": "Refresh",
-				"Text": ""
+				"Text": "$(L,'refreshButtonText')"
 			},
 			{
 				"OnPress": "/SalesOrdersOnline/Rules/SalesOrder/SOHeaderList/OnCreate.js",
 				"Position": "right",
 				"SystemItem": "Add",
-				"Text": ""
+				"Text": "$(L,'addButtonText')"
 			},
 			{
 				"OnPress": "/SalesOrdersOnline/Actions/SalesOrder/NavToSOHeaderFilter.action",
